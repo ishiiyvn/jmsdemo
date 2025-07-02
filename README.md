@@ -7,7 +7,7 @@ It models a typical enterprise scenario where orders are processed via a queue a
 - [How It Works](#how-it-works)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
+- [Running the Application](#running-the-application)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
@@ -83,7 +83,7 @@ Run this command to start it again:
 docker start activemq-classic
 ```
 
-## Usage
+## Running the Application
 
 1. Start ActiveMQ Classic (see above).
 2. Build the project:
