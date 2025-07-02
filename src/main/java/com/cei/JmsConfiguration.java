@@ -8,6 +8,9 @@ import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import jakarta.jms.ConnectionFactory;
 
 @Configuration
@@ -24,6 +27,12 @@ public class JmsConfiguration {
 	private String password;
 	
 	
+	@Bean
+	public ObjectMapper objectMapper(){
+		return new ObjectMapper();
+	}
+
+
 	@Bean
 	ConnectionFactory connectionFactory() {
 	    

@@ -15,6 +15,8 @@ public class StoreServiceImpl implements StoreService {
 	
 	private final List<String> notificationHistory = new ArrayList<>();
 	
+	private final List<String> addHistory = new ArrayList<>();
+	
 	@Override
 	public void registerOrder(Order order) {
 		this.receiveOrders.add(order);
@@ -41,5 +43,21 @@ public class StoreServiceImpl implements StoreService {
 	@Override
 	public List<String> getNotificationHistory() {
 		return new ArrayList<>(notificationHistory);
+	}
+	
+	@Override
+	public void logAddEvent(Order order) {
+		String addMsg = "Order with ID: " + order.getId() + " was added.";
+		this.addHistory.add(addMsg);
+	}
+	
+	@Override
+	public List<String> getAddHistory() {
+		return new ArrayList<>(addHistory);
+	}
+	
+	@Override
+	public void handleOrderAdd(Order order) {
+		logAddEvent(order);
 	}
 }

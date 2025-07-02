@@ -13,5 +13,9 @@ public interface StoreService {
 	void handleOrderNotification(Order order);
 	void logOrderEvent(Order order);
 	List<String> getNotificationHistory();
+	
+	void handleOrderAdd(Order order);
+	void logAddEvent(Order order);
+	List<String> getAddHistory();
 
 }
